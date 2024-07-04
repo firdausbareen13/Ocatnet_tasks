@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fairy World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="cosmetic_style.css">
+    <link rel="stylesheet" href="cosmetic_util.css">
+    <script src="cosmetic_timer.js"></script>
+</head>
+
+
+<body class="x-overflow-hidden">
+    <div class="container mx-auto">
+
+
+
+        <header class="blog-header py-3 ">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light button ">
+                <div class="container-fluid ">
+                    <img src="img/logo.jpg" width="25px"></img>
+                    <a class="navbar-brand font-bold text-blue text-style" href="#"> FAIRY COSMETIC</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link font-bold" href="#">HOME></a></li>
+                            <li class="nav-item"><a class="nav-link font-bold" href="#">ABOUT></a></li>
+                            <li class="nav-item"><a class="nav-link font-bold" href="#">SERVICES></a></li>
+                            <li class="nav-item"><a class="nav-link font-bold" href="#">CONTACT US></a></li>
+                            <li class="nav-item"><button class="btn btn-primary font-bold ">BUY NOW></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        
+        <main class="min-h-screen">
+            <section class="carousel">
+
+                <div class="carousel-images">
+                    <img src="img/carousel1.png" alt="Image 1">
+                    <img src="img/carousel2.jpg" alt="Image 2">
+                    <img src="img/carousel3.jpg" alt="Image 3">
+                </div>
+
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prev">❮</button>
+                    <button class="carousel-button" id="next">❯</button>
+                </div>
+            </section>
+            
+            <hr>
+            <section class="section1">
+                <div class="flex">
+                    <div class="topleft flex  flex-col justify-center px-2">
+                        <div class="text-center">
+                            <img class="fairyimg" src="img/logo.jpg">
+                        </div>
+
+                        <h1 class="my-1 text-center text-blue font-bold font-effect-outline"><i>The Best Fairy Cosmetic
+                                Sale!!</i></h1>
+                        <p class="text-center my-2  text-purple"><b>The most awaited sale has finally arrived.
+                                Get your Fairy products at extremely low price
+                                and win exciting prizes.
+                                HURRY UP!!!! time is running out.</b>
+                        </p>
+                        <p class="deal text-center text-purple"><B>THE DEAL ENDS IN:</B><br><span class="btn font-bold"
+                                id="demo"></span></p>
+                        <div class="flex justify-center">
+                            <button class="b">See More</button>
+                            <button class="b">Contact us</button>
+                        </div>
+                    </div>
+
+                    <div class="topright flex justify-center">
+                        <img id="myimg" class="fairy" src="img/fairy.png" alt="welcome to fairy land!!!">
+
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
+
+                        <script>
+
+                            var modal = document.getElementById('myModal');
+                            var img = document.getElementById('myimg');
+                            var modalImg = document.getElementById("img01");
+                            var captionText = document.getElementById("caption");
+                            img.onclick = function () {
+                                modal.style.display = "block";
+                                modalImg.src = this.src;
+                                captionText.innerHTML = this.alt;
+                            }
+
+
+                            var span = document.getElementsByClassName("close")[0];
+
+
+                            span.onclick = function () {
+                                modal.style.display = "none";
+                            }
+                        </script>
+                    </div>
+                </div>
+            </section>
+            
+            <hr>
+            <section class="section2">
+                <h1 class="text-center my-2 font-bold text-pricing">PRICING</h1>
+                <p class="my-2 text-p">Latest Products with High Quality.</p>
+                
+                <marquee direction="left">
+                    <div class="boxes flex justify-center">
+                        <div class="box">
+                            <h2 class="font-effect-outline text-p">Foundations</h2>
+                            <img class="foundation" src="img/foundation.gif"></img>
+
+                            <ul>
+                                <li class="highlighted"><b>30% Discounts</b></li>
+                                <li>get upto</li>
+                                <li><i>30% discount</i> on your</li>
+                                <li>favourite brands</li>
+                                <li><button class="btn btn-primary">Buy Now</button></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="box">
+                            <h2 class="font-effect-outline text-p">Highlighters</h2>
+                            <img class="highlighter" src="img/highlighter.jpg"></img>
+                            <ul>
+                                <li class="highlighted"><b>30-40% Discounts</b></li>
+                                <li>get more than</li>
+                                <li><i>30% discount</i> on your</li>
+                                <li>favourite brands</li>
+                                <li><button class="btn btn-primary">Buy now</button></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="box">
+                            <h2 class="font-effect-outline text-p">Lipsticks</h2>
+                            <img class="lipstick" src="img/lipstick.jpg"></img>
+                            <ul>
+                                <li class="highlighted"><b>50% Discounts</b></li>
+                                <li>get upto</li>
+                                <li><i>50% discount</i> on your</li>
+                                <li>favourite brands</li>
+                                <li><button class="btn btn-primary">Buy now</button></li>
+                            </ul>
+                        </div>
+                    
+                    </div>
+                </marquee>
+            </section>
+            
+            <hr>
+
+            <section class="section3">
+                <h1 class="text-center text-blue my-2 text-product">PRODUCTS FEATURES</h1>
+                <div class=" plantable">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Foundation</th>
+                                <th>Highlighters</th>
+                                <th>Lipsticks</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="text-start">Fragrance</th>
+                                <td>YES</td>
+                                <td>YES</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">waterproof</th>
+                                <td>-</td>
+                                <td>YES</td>
+                                <td>YES</td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="text-start">Reliable</th>
+                                <td>YES</td>
+                                <td>YES</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">Appealing</th>
+                                <td>-</td>
+                                <td>YES</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">Style</th>
+                                <td>YES</td>
+                                <td>YES</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">Natural</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>YES</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+            <hr>
+        </main>
+        
+        
+        
+        <footer>
+            Copyright &copy; Fairycosmetic.com | All Rights Reserved
+        </footer>
+    </div>
+
+    <div class="theme-dropdown">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="img/contrast-2-fill.png">
+            </button>
+            <div class="dropdown-menu" aria-labelledby="themeDropdown">
+                <a class="dropdown-item" href="#" id="light-theme">Light</a>
+                <a class="dropdown-item" href="#" id="dark-theme">Dark</a>
+                <a class="dropdown-item" href="#" id="auto-theme">Auto</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary back-to-top">Back to top</button>
+
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-images img');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let counter = 0;
+
+        function showImage(index) {
+            if (index >= images.length) {
+                counter = 0;
+            } else if (index < 0) {
+                counter = images.length - 1;
+            } else {
+                counter = index;
+            }
+            carouselImages.style.transform = `translateX(${-counter * 100}%)`;
+        }
+
+        nextButton.addEventListener('click', () => showImage(counter + 1));
+        prevButton.addEventListener('click', () => showImage(counter - 1));
+
+        setInterval(() => showImage(counter + 1), 3000);
+
+        // Theme switcher
+        const lightTheme = document.getElementById('light-theme');
+        const darkTheme = document.getElementById('dark-theme');
+        const autoTheme = document.getElementById('auto-theme');
+        const body = document.body;
+
+        lightTheme.addEventListener('click', () => {
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
+        });
+
+        darkTheme.addEventListener('click', () => {
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+        });
+
+        autoTheme.addEventListener('click', () => {
+            body.classList.remove('light-theme');
+            body.classList.remove('dark-theme');
+        });
+
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

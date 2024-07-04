@@ -1,0 +1,289 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, Times, 'Times New Roman', serif;
+}
+
+.container{
+    max-width: 80vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(img/background.jpg);
+    background-size:cover;
+    background-position: bottom;
+    background-color: pink;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+/*---navbar---*/
+.navbar{
+    display: flex;
+    height: 67px;
+}
+.navbar li{
+    list-style-type: none;
+    margin: 0 12px;
+}
+
+.topleft{
+    width: 50%;
+}
+.topright{
+    width: 50%;   
+}
+
+/*---section1---*/
+.section1{
+    max-height: 100vh;
+}
+
+.section1 h1
+{
+    font-size: 2rem;
+}
+
+.logo{
+    font-size: 1.3rem;
+}
+
+.fairyimg{
+    width: 70px;
+
+}
+
+.topright.fairy{
+    width: 300px;
+    height: 100px;
+}
+
+.fairy{
+    max-width: 350px;
+    height:auto;
+    filter: drop-shadow(8px 8px 10px rgba(122, 44, 122, 0.979));
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+     -webkit-transform: scaleX(-1);
+     transform: scaleX(-1) ;
+}
+
+/*----section2----*/
+.section2{
+    padding: 73px;
+    
+}
+.section2 h1{
+    font-size: 3rem;
+}
+.section2 p{
+    padding: 0 8vm;
+    text-align: center;
+}
+.box{
+    padding: 8px 0;
+    margin: 12px 22px;
+    min-width: 23vw;
+    border: 2px rgb(109, 75, 99);
+    text-align: center;
+    border-radius: 8px;
+    background-image: url(img/flexbg.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.box ul{
+    list-style-type: none;
+}
+
+.box ul li{
+    margin: 12px 4px;
+    color: rgb(41, 15, 36);
+}
+
+.box h2{
+    font-size: 2rem;
+    padding: 16px 0;
+}
+
+.highlighted{
+    font-size: 1.2rem;
+    font-weight: bolder
+}
+
+.plantable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*---section3---*/
+.section3 table{
+    width: 100%;
+    margin-bottom: 140px 0;
+    margin-top: 20px 0;
+    border-collapse: collapse;
+    background-color: rgb(192, 136, 178);
+}
+
+.section3 table th{
+    width: 23vw;
+    border-bottom: 2px solid black;
+    padding: 15px 0;
+    background-color:  rgb(187, 154, 179);
+    color: rgb(41, 15, 36);
+
+}
+
+.section3 table td{
+    border-bottom: 2px solid black;
+    background-color: rgb(189, 171, 184);
+    color: rgb(41, 15, 36)
+    
+}
+
+.section3 h1{
+    font-size: 2.3rem;
+    padding-bottom: 40px;
+}
+
+.section3{
+    padding: 73PX;
+}
+
+
+/*---footer--*/
+footer{
+    padding: 23px;
+    text-align: center;
+}
+
+/*---carousel---*/
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.8s ease;
+
+}
+
+.carousel-images img {
+    width: 150%;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/*---theme dropdown---*/
+.theme-dropdown {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: white;
+}
+
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+.foundation{
+   margin: auto;
+   width: 93%;
+   max-width: 300px;
+   max-height: 100%;
+}
+
+
+/*---modal---*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 20%;
+    max-width: 300px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
