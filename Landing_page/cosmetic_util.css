@@ -125,3 +125,17 @@
     margin: 4px;
 }
 
+.b:hover{
+    background-color: rgb(53, 87, 240);
+    border: 2px  rgb(53, 87, 240);
+    color: rgb(255, 255, 255);
+}
+.nav{
+    color:  rgb(104, 27, 87);
+}
+.nav:hover{
+    text-decoration: underline;
+    color: aliceblue;
+    background-color: rgb(206, 84, 179);
+    border-radius: 50px;
+}
