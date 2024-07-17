@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>s=new EventSource("/events"); s.onmessage=()=> location.reload;</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <div class="input">
+                <input class="todo-input" placeholder="Add a new task......">
+                <p class="error-msg" style="display: none; color: red;">Please enter a task!</p>
+            </div>
+            <div class="btn">
+                <button class="add-button">
+                    <i class="fa-regular fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="filters">
+            <div class="filter" data-filter="completed">Completed</div>
+            <div class="filter" data-filter="pending">Incompleted</div>
+            <div class="delete-all">Delete All</div>
+        </div>
+        <div class="todos-container">
+            <div class="todo-wrapper">
+                <ul class="todos"></ul>
+                <img class="empty-image" src="img/6218342.jpg" alt="No tasks" title="No task!">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

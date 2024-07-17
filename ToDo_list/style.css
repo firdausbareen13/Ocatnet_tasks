@@ -1,0 +1,239 @@
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(img/lake-with-trees.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    width: 400px;
+    height: auto;
+    min-height: 400px;
+    padding: 30px;
+    background: transparent;
+    border: 2px solid #e48101;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+   
+}
+
+h1{
+    color: #834f0b;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+h1:hover{
+    background-color:#f5cd9a;
+    text-transform: uppercase;
+    -webkit-text-fill-color: #d37f11;
+}
+
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+.todo-input{
+    flex: 1;
+    outline: none;
+    padding: 10px 10px 10px 20px;
+    background-color: transparent;
+    border: 2px solid #e48101;
+    border-radius: 30px;
+    color: #d37101;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.todo-input::placeholder{
+    color: #9c5e0d;
+}
+
+.add-button{
+    border: none;
+    outline: none;
+    background:#e48101;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+.add-button:hover{
+    background-color:#9c5e0d;
+}
+
+.empty-image{
+    margin: 55px auto 0;
+    margin-left: 70px;
+    display:block;
+    width: 200px;
+    height: 200px;
+    opacity: 0.5;      
+}
+.empty-image:hover {
+    opacity: 0.9;
+}
+.todo{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d37101;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px 12px;
+    padding-left: 20px;
+    border: 2px solid #e48101;
+    transition: all 0.2s ease;
+    position: relative;
+    
+}
+
+.todo:first-child{
+    margin-top: 0;
+}
+
+.todo:last-child{
+    margin-bottom: 0;
+}
+
+.todo:hover{
+    background-color:#e99b36;
+}
+
+.todo label{
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+.todo-span{
+    flex: 1;
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+span::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-left: -30px;
+    border-radius: 100px;
+    border: 2px solid #e48101;
+}
+
+input[type='checkbox']{
+    visibility: hidden;
+}
+
+input:checked + span{
+    text-decoration: line-through;
+    text-decoration-color: #5f4016;
+    color: #5f4016;
+}
+
+.todo:hover input:checked + span::before, input:checked + span::before{
+    background: 50% 50% no-repeat #09bb21;
+}
+
+.todo:hover span::before{
+    border-color: #ffffff;
+}
+
+.todo .delete-btn,
+.todo .edit-btn,
+.todo .save-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    padding:0;
+}
+
+.todo .delete-btn:hover,
+.todo .edit-btn:hover,
+.todo .save-btn:hover{
+    background-color:#9c5e0d;
+}
+.todos-container {
+    height: 300px;
+    overflow-y: auto; 
+    padding-right: 15px;
+    position: relative;
+}
+
+.todo-wrapper{
+    padding-right: 15px;
+}
+
+.todos-container::-webkit-scrollbar {
+    width: 7px;
+}
+
+.todos-container::-webkit-scrollbar-track {
+    background: #ffd479;
+    border-radius: 10px;
+}
+
+.todos-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+ 
+.filters{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.filter{
+    color: #5f4016;
+    padding: 5px 15px;
+    border-radius: 100px;
+    border: 2px solid #e48101;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.filter.active, .filter:hover{
+    background-color:#ec9522;
+    font-size: 13px;
+    align-content: center;
+}
+
+.delete-all{
+    display:flex;
+    color: #ffffff;
+    padding: 7px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.delete-all:hover{
+    border-radius: 5px;
+    background-color: #e48101;
+}
